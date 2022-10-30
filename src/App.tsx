@@ -1,6 +1,7 @@
 
 import './App.css';
 import {Container, Paper,Typography} from '@mui/material';
+import SearchForm from './components/SearchForm/SearchForm'
 
 function App() {
   const styles = {
@@ -27,6 +28,7 @@ function App() {
         <Typography sx={styles.Title} variant="h3" component="h1">React without the crap!</Typography>
         <Typography variant="body1" component="p">Get right to building your SaaS product with the best UI library. No more bullshit boilerplate code!</Typography>
         <code><a target="_blank" href="https://digyt.co">Made with love by Digyt</a></code>
+        <SearchForm />
       </Paper>
     </Container>
   );
