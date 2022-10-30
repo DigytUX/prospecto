@@ -1,7 +1,8 @@
 
-import './App.css';
-import {Container, Paper,Typography} from '@mui/material';
-import SearchForm from './components/SearchForm/SearchForm'
+import './App.css'
+import { BrowserRouter as Router, Routes, Route} from 'react-router-dom'
+import Welcome from '../src/pages/index'
+import Home from '../src/pages/Home'
 
 function App() {
   const styles = {
@@ -23,15 +24,13 @@ function App() {
     }
   }
   return (
-    <Container sx={styles.Container}>
-      <Paper sx={styles.FlexBox} elevation={0}>
-        <Typography sx={styles.Title} variant="h3" component="h1">React without the crap!</Typography>
-        <Typography variant="body1" component="p">Get right to building your SaaS product with the best UI library. No more bullshit boilerplate code!</Typography>
-        <code><a target="_blank" href="https://digyt.co">Made with love by Digyt</a></code>
-        <SearchForm />
-      </Paper>
-    </Container>
-  );
+  <Router>
+    <Routes>
+      <Route path='/welcome' element={<Welcome />} />
+      <Route path='/' element={<Home />} />
+    </Routes> 
+  </Router>
+  )
 }
 
-export default App;
+export default App
