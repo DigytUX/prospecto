@@ -26,8 +26,8 @@ function App() {
   return (
   <Router>
     <Routes>
-      <Route path='/welcome' element={<Welcome />} />
-      <Route path='/' element={<Home />} />
+      <Route path='/dashboard' element={<Home />} />
+      <Route path='/' element={<Welcome />} />
     </Routes> 
   </Router>
   )
