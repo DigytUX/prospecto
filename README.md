@@ -5,6 +5,8 @@ This project was created to help developers get their idea from brain to code qu
 
 In the project directory, you can run:
 
+### `npm install`
+
 ### `npm start`
 
 Runs the app in the development mode.\
