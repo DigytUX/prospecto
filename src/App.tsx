@@ -1,10 +1,18 @@
 
+import {useContext} from 'react'
 import './App.css'
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import Welcome from '../src/pages/index'
 import Home from '../src/pages/Home'
+import { AuthContext } from './context/AuthContext'
+
+
 
 function App() {
+  const user = useContext(AuthContext);
+
+  console.log('Here is the user from user context', user)
+  
   const styles = {
     Container: {
       height:'100vh',

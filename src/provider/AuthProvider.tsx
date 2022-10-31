@@ -1,6 +1,5 @@
 import React,{useState, useEffect} from 'react'
 import { AuthContext } from '../context/AuthContext'
-import firebase from 'firebase/compat/app'
 import { auth } from '../config/firebase/firebase.config'
 import {User} from '@firebase/auth-types';
 /* 
@@ -18,10 +17,12 @@ export const AuthProvider: React.FC<Props> = ({children}) => {
   
   /* Not liking the firebase type */
   useEffect(() => {
-    const unsubscribe = auth.onAuthStateChanged((firebaseUser) => {
+    const unsubscribe = auth.onAuthStateChanged((firebaseUser:any) => {
       setUser(firebaseUser);
-    }
-  })
+    })
+
+    return unsubscribe
+  },[])
 
   return <AuthContext.Provider value={null}>{children}</AuthContext.Provider>
 }

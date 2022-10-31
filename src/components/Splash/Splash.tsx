@@ -1,5 +1,7 @@
-import React, {useState} from 'react'
-import { auth } from "../../config/firebase/firebase.config";
+import React, {useState, useContext} from 'react'
+import {auth} from '../../config/firebase/firebase.config'
+import {AuthContext} from "../../context/AuthContext";
+import {createUserWithEmailAndPassword} from 'firebase/auth'
 
 import {
   Container,
@@ -22,8 +24,21 @@ export default function Splash({
   image
 }: AppProps){
 
+  const user = useContext(AuthContext);
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
+
+  const createAccount = async () => {
+    try {
+      await createUserWithEmailAndPassword(
+        auth,
+        email,
+        password
+      );
+    } catch (error) {
+        console.error(error);
+    }
+  };
 
   const styles = {
     Splash:{
@@ -80,7 +95,7 @@ export default function Splash({
                   <TextField onChange={e => setPassword(e.target.value)} value={password} sx={styles.TextField} placeholder="password" type="password" />
                 </Grid>
                 <Grid item xs={12}>
-                  <Button onClick={loginUser} variant="contained">Login</Button>
+                  <Button onClick={createAccount} variant="contained">Login</Button>
                 </Grid>
               </Grid>
             </Box>
