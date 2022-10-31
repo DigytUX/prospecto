@@ -7,8 +7,9 @@ import {
   FIREBASE_API_ID,
   FIREBASE_MEASUREMENT_ID
 } from '../index'
-import { initializeApp } from "firebase/app";
+import { initializeApp} from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
+import { getAuth } from "firebase/auth";
 
 const firebaseConfig = {
   apiKey:FIREBASE_API_KEY,
@@ -21,4 +22,4 @@ const firebaseConfig = {
 };
 
 export const app = initializeApp(firebaseConfig);
-export const analytics = getAnalytics(app);
+export const auth = getAuth()

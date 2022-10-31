@@ -1,4 +1,5 @@
-import React from 'react'
+import React, {useState} from 'react'
+import { auth } from "../../config/firebase/firebase.config";
 
 import {
   Container,
@@ -20,6 +21,9 @@ export default function Splash({
   text, 
   image
 }: AppProps){
+
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
 
   const styles = {
     Splash:{
@@ -52,6 +56,10 @@ export default function Splash({
     }
   }
 
+  const loginUser = () => {
+    console.log(email, password)
+  }
+
   return (
     <Box sx={styles.Splash}>
       <Container maxWidth="xl">
@@ -66,13 +74,13 @@ export default function Splash({
                   <Typography variant="body1" component="p">{text}</Typography>
                 </Grid>
                 <Grid item xs={12}>
-                  <TextField sx={styles.TextField} placeholder="email" type="email" />
+                  <TextField onChange={e => setEmail(e.target.value)} value={email} sx={styles.TextField} placeholder="email" type="email" />
                 </Grid>
                 <Grid item xs={12}>
-                  <TextField sx={styles.TextField} placeholder="password" type="password" />
+                  <TextField onChange={e => setPassword(e.target.value)} value={password} sx={styles.TextField} placeholder="password" type="password" />
                 </Grid>
                 <Grid item xs={12}>
-                  <Button variant="contained">Login</Button>
+                  <Button onClick={loginUser} variant="contained">Login</Button>
                 </Grid>
               </Grid>
             </Box>
