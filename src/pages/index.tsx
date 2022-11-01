@@ -7,7 +7,6 @@ import firebase from 'firebase/compat/app'
 
 console.log('firebase', firebase)
 
-
 /* Public Page  (no auth) */
 export default function Welcome(){
   return (

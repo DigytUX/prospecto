@@ -1,7 +1,8 @@
 import React,{useState, useEffect} from 'react'
-import { AuthContext } from '../context/AuthContext'
-import { auth } from '../config/firebase/firebase.config'
-import {User} from '@firebase/auth-types';
+import {AuthContext} from '../context/AuthContext'
+import {auth} from '../config/firebase/firebase.config'
+import {onAuthStateChanged} from "firebase/auth";
+
 /* 
 Note that the PropsWithChildren type is omitted from the props type 
 of a FunctionalComponent after React 18,
@@ -13,16 +14,17 @@ interface Props {
 }
 
 export const AuthProvider: React.FC<Props> = ({children}) => {
-  const [user, setUser] = useState<User | null>(null);
+
+  // eventually replace any with the firebase user type
+  const [user, setUser] = useState<any | null>(null);
   
-  /* Not liking the firebase type */
   useEffect(() => {
-    const unsubscribe = auth.onAuthStateChanged((firebaseUser:any) => {
+    const unsubscribe = onAuthStateChanged(auth, (firebaseUser:any) => {
       setUser(firebaseUser);
     })
 
     return unsubscribe
   },[])
 
-  return <AuthContext.Provider value={null}>{children}</AuthContext.Provider>
+  return <AuthContext.Provider value={user}>{children}</AuthContext.Provider>
 }

@@ -1,7 +1,7 @@
-import React, {useState, useContext} from 'react'
+import React, {useEffect, useState, useContext} from 'react'
 import {auth} from '../../config/firebase/firebase.config'
 import {AuthContext} from "../../context/AuthContext";
-import {createUserWithEmailAndPassword} from 'firebase/auth'
+import {createUserWithEmailAndPassword, signOut, signInWithEmailAndPassword} from 'firebase/auth'
 
 import {
   Container,
@@ -11,6 +11,7 @@ import {
   TextField,
   Button
 } from '@mui/material'
+import { errorPrefix } from '@firebase/util';
 
 interface AppProps {
   title:string,
@@ -18,27 +19,22 @@ interface AppProps {
   image:string
 }
 
+interface Error {
+  stack?: string;
+  customData?:object
+  code?:string
+  name?:string
+}
+
 export default function Splash({
   title, 
   text, 
   image
 }: AppProps){
-
   const user = useContext(AuthContext);
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
-
-  const createAccount = async () => {
-    try {
-      await createUserWithEmailAndPassword(
-        auth,
-        email,
-        password
-      );
-    } catch (error) {
-        console.error(error);
-    }
-  };
+  const [error, setError] = useState<null | string>(null)
 
   const styles = {
     Splash:{
@@ -71,8 +67,63 @@ export default function Splash({
     }
   }
 
-  const loginUser = () => {
-    console.log(email, password)
+  const createAccount = async () => {
+    try {
+      await createUserWithEmailAndPassword(
+        auth,
+        email,
+        password
+      );
+    } catch (error) {
+      if (error instanceof Error) {
+
+        let errorCode:string = ''
+
+        for (const [key, value] of Object.entries(error)) {
+          console.log(`${key}: ${value}`);
+          if(key === 'code'){
+            errorCode = value
+          }
+        }
+      
+        switch(errorCode) {
+          case 'auth/email-already-in-use':
+            setError('Username already in use')
+
+            try {
+              await signInWithEmailAndPassword(auth, email, password)
+              setError(null)
+            } catch (error) {
+              if (error instanceof Error) {
+                let errorCode:string = ''
+                
+                for (const [key, value] of Object.entries(error)) {
+                  console.log(`${key}: ${value}`);
+                  if(key === 'code'){
+                    errorCode = value
+                  }
+                }
+                /* Handle additional errors */
+              }
+            }
+
+            break;
+          case 'auth/insufficient-permission':
+            break;
+          case 'auth/internal-error':
+            break;
+          default:
+            // code block
+            setError(null)
+        } 
+      }
+    };
+  }
+
+  const logOff = async() => {
+    try {
+      signOut(auth)
+    } catch (error) {}
   }
 
   return (
@@ -94,8 +145,16 @@ export default function Splash({
                 <Grid item xs={12}>
                   <TextField onChange={e => setPassword(e.target.value)} value={password} sx={styles.TextField} placeholder="password" type="password" />
                 </Grid>
-                <Grid item xs={12}>
-                  <Button onClick={createAccount} variant="contained">Login</Button>
+                <Grid item xs={6}>
+                  <Typography>{error}</Typography>
+                  <Grid container spacing={3}>
+                    <Grid item xs={6}>
+                     <Button sx={{width:'100%'}} onClick={createAccount} variant="contained">Login</Button>
+                    </Grid>
+                    <Grid item xs={6}>
+                      <Button sx={{width:'100%'}} onClick={logOff} variant="contained">Log Off</Button>
+                    </Grid> 
+                  </Grid>
                 </Grid>
               </Grid>
             </Box>
