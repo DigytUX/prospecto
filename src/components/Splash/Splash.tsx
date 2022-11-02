@@ -1,7 +1,11 @@
 import React, {useEffect, useState, useContext} from 'react'
 import {auth} from '../../config/firebase/firebase.config'
-import {AuthContext} from "../../context/AuthContext";
-import {createUserWithEmailAndPassword, signOut, signInWithEmailAndPassword} from 'firebase/auth'
+import {createUserWithEmailAndPassword,
+  signOut,
+  signInWithEmailAndPassword
+} from 'firebase/auth'
+import {UserAuth} from '../../context/AuthContext'
+
 import {
   Container,
   Grid,
@@ -10,8 +14,8 @@ import {
   TextField,
   Button
 } from '@mui/material'
+
 import { errorPrefix } from '@firebase/util';
-import {createUser, signInUser, signOutUser} from '../../provider/AuthProvider'
 
 interface AppProps {
   title:string,
@@ -31,9 +35,8 @@ export default function Splash({
   text, 
   image
 }: AppProps){
-  
-  const user = useContext(AuthContext);
-  
+
+  const {user, createNewUser, signInUser, signOutUser} = UserAuth()
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [error, setError] = useState<null | string>(null)
@@ -69,9 +72,15 @@ export default function Splash({
     }
   }
 
-  const createAccount = async () => {
+  useEffect(() => {
+    console.log('USER', user)
+  })
+
+  const handleLogin = async () => {
+    console.log('loggin you in')
+    
     try {
-      await createUser(
+      await createNewUser(
         email,
         password
       );
@@ -80,16 +89,21 @@ export default function Splash({
         let errorCode:string = ''
 
         for (const [key, value] of Object.entries(error)) {
-          console.log(`${key}: ${value}`);
+          console.log('VALUE', value)
           if(key === 'code'){
             errorCode = value
           }
         }
+
+        console.log('ERROR CODE', errorCode)
       
         switch(errorCode) {
           case 'auth/email-already-in-use':
             try {
-              await signInUser(email, password)
+              await signInUser(
+                email, 
+                password
+              )
               setError(null)
             } catch (error) {
               if (error instanceof Error) {
@@ -119,7 +133,7 @@ export default function Splash({
 
   const logOff = async() => {
     try {
-      signOutUser()
+      await signOutUser()
     } catch (error) {}
   }
 
@@ -143,11 +157,11 @@ export default function Splash({
                   <TextField onChange={e => setPassword(e.target.value)} value={password} sx={styles.TextField} placeholder="password" type="password" />
                 </Grid>
                 <Grid item xs={6}>
+                <Typography>{error}</Typography>
                 {user && <Typography>You are logged in</Typography>}
-                  <Typography>{error}</Typography>
                   <Grid container spacing={3}>
                     <Grid item xs={6}>
-                     <Button sx={{width:'100%'}} onClick={createAccount} variant="contained">Login</Button>
+                     <Button sx={{width:'100%'}} onClick={handleLogin} variant="contained">Login</Button>
                     </Grid>
                     <Grid item xs={6}>
                       <Button sx={{width:'100%'}} onClick={logOff} variant="contained">Log Off</Button>
@@ -158,7 +172,7 @@ export default function Splash({
             </Box>
           </Grid>
           <Grid sx={styles.RightContent} item xs={12} lg={6}>
-              <Box sx={styles.Image} component="img" src={image} />
+            <Box sx={styles.Image} component="img" src={image} />
           </Grid>
         </Grid>
       </Container>
