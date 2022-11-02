@@ -1,7 +1,6 @@
-import React, {useEffect, useState, useContext} from 'react'
-import {auth} from '../../config/firebase/firebase.config'
-import {AuthContext} from "../../context/AuthContext";
-import {createUserWithEmailAndPassword, signOut, signInWithEmailAndPassword} from 'firebase/auth'
+import React, {useState} from 'react'
+import {UserAuth} from '../../context/AuthContext'
+import {useNavigate} from 'react-router-dom'
 
 import {
   Container,
@@ -11,7 +10,6 @@ import {
   TextField,
   Button
 } from '@mui/material'
-import { errorPrefix } from '@firebase/util';
 
 interface AppProps {
   title:string,
@@ -31,7 +29,13 @@ export default function Splash({
   text, 
   image
 }: AppProps){
-  const user = useContext(AuthContext);
+  const {
+    user,
+    createNewUser,
+    signInUser,
+    signOutUser
+  } = UserAuth()
+  const navigate = useNavigate();
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [error, setError] = useState<null | string>(null)
@@ -64,49 +68,39 @@ export default function Splash({
     },
     Image:{
       width:'80%'
+    },
+    Button:{
+      width:'100%'
     }
   }
 
-  const createAccount = async () => {
+  const handleLogin = async () => {
     try {
-      await createUserWithEmailAndPassword(
-        auth,
-        email,
-        password
-      );
+      await createNewUser(email, password);
     } catch (error) {
       if (error instanceof Error) {
-
         let errorCode:string = ''
 
         for (const [key, value] of Object.entries(error)) {
-          console.log(`${key}: ${value}`);
-          if(key === 'code'){
-            errorCode = value
-          }
+          if(key === 'code') errorCode = value
         }
-      
+
         switch(errorCode) {
           case 'auth/email-already-in-use':
-            setError('Username already in use')
-
             try {
-              await signInWithEmailAndPassword(auth, email, password)
+              await signInUser(email, password)
               setError(null)
+              navigate('/dashboard')
             } catch (error) {
               if (error instanceof Error) {
                 let errorCode:string = ''
                 
                 for (const [key, value] of Object.entries(error)) {
-                  console.log(`${key}: ${value}`);
-                  if(key === 'code'){
-                    errorCode = value
-                  }
+                  if(key === 'code') errorCode = value
                 }
                 /* Handle additional errors */
               }
             }
-
             break;
           case 'auth/insufficient-permission':
             break;
@@ -122,7 +116,7 @@ export default function Splash({
 
   const logOff = async() => {
     try {
-      signOut(auth)
+      await signOutUser()
     } catch (error) {}
   }
 
@@ -146,13 +140,14 @@ export default function Splash({
                   <TextField onChange={e => setPassword(e.target.value)} value={password} sx={styles.TextField} placeholder="password" type="password" />
                 </Grid>
                 <Grid item xs={6}>
-                  <Typography>{error}</Typography>
+                <Typography>{error}</Typography>
+                {user && <Typography>You are logged in</Typography>}
                   <Grid container spacing={3}>
                     <Grid item xs={6}>
-                     <Button sx={{width:'100%'}} onClick={createAccount} variant="contained">Login</Button>
+                     <Button sx={styles.Button} onClick={handleLogin} variant="contained">Login</Button>
                     </Grid>
                     <Grid item xs={6}>
-                      <Button sx={{width:'100%'}} onClick={logOff} variant="contained">Log Off</Button>
+                      <Button sx={styles.Button} onClick={logOff} variant="contained">Log Off</Button>
                     </Grid> 
                   </Grid>
                 </Grid>
@@ -160,7 +155,7 @@ export default function Splash({
             </Box>
           </Grid>
           <Grid sx={styles.RightContent} item xs={12} lg={6}>
-              <Box sx={styles.Image} component="img" src={image} />
+            <Box sx={styles.Image} component="img" src={image} />
           </Grid>
         </Grid>
       </Container>
