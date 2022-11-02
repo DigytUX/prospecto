@@ -1,17 +1,20 @@
-import React, {useContext} from 'react'
+import React, {useContext, useEffect} from 'react'
 import {Navigate} from 'react-router-dom'
 import {UserAuth} from '../context/AuthContext'
+import {auth} from '../config/firebase/firebase.config'
 
 interface Props {
-  children:React.ReactNode
+  children:React.FC[]
 }
 
-export const RouterGuard:any = (props:Props) => {
-  const {user} = UserAuth()
-  if(!user) {
+export const ProtectedRoute:any = (props:Props) => {
+  const user = UserAuth()
+  
+  if(!user.user) {
     return (
       <Navigate to='/' />
     )
   }
+
   return props.children
 }

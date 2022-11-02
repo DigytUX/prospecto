@@ -5,6 +5,7 @@ import {createUserWithEmailAndPassword,
   signInWithEmailAndPassword
 } from 'firebase/auth'
 import {UserAuth} from '../../context/AuthContext'
+import {Link, useNavigate} from 'react-router-dom'
 
 import {
   Container,
@@ -35,8 +36,12 @@ export default function Splash({
   text, 
   image
 }: AppProps){
-
-  const {user, createNewUser, signInUser, signOutUser} = UserAuth()
+  const {user,
+    createNewUser,
+    signInUser,
+    signOutUser
+  } = UserAuth()
+  const navigate = useNavigate();
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [error, setError] = useState<null | string>(null)
@@ -77,8 +82,6 @@ export default function Splash({
   })
 
   const handleLogin = async () => {
-    console.log('loggin you in')
-    
     try {
       await createNewUser(
         email,
@@ -105,6 +108,7 @@ export default function Splash({
                 password
               )
               setError(null)
+              navigate('/dashboard')
             } catch (error) {
               if (error instanceof Error) {
                 let errorCode:string = ''
@@ -132,8 +136,11 @@ export default function Splash({
   }
 
   const logOff = async() => {
+    console.log('removing the local storage')
+    localStorage.removeItem('userId');
     try {
       await signOutUser()
+
     } catch (error) {}
   }
 
