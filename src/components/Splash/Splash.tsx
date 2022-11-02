@@ -1,11 +1,6 @@
-import React, {useEffect, useState, useContext} from 'react'
-import {auth} from '../../config/firebase/firebase.config'
-import {createUserWithEmailAndPassword,
-  signOut,
-  signInWithEmailAndPassword
-} from 'firebase/auth'
+import React, {useState} from 'react'
 import {UserAuth} from '../../context/AuthContext'
-import {Link, useNavigate} from 'react-router-dom'
+import {useNavigate} from 'react-router-dom'
 
 import {
   Container,
@@ -15,8 +10,6 @@ import {
   TextField,
   Button
 } from '@mui/material'
-
-import { errorPrefix } from '@firebase/util';
 
 interface AppProps {
   title:string,
@@ -36,7 +29,8 @@ export default function Splash({
   text, 
   image
 }: AppProps){
-  const {user,
+  const {
+    user,
     createNewUser,
     signInUser,
     signOutUser
@@ -74,39 +68,27 @@ export default function Splash({
     },
     Image:{
       width:'80%'
+    },
+    Button:{
+      width:'100%'
     }
   }
 
-  useEffect(() => {
-    console.log('USER', user)
-  })
-
   const handleLogin = async () => {
     try {
-      await createNewUser(
-        email,
-        password
-      );
+      await createNewUser(email, password);
     } catch (error) {
       if (error instanceof Error) {
         let errorCode:string = ''
 
         for (const [key, value] of Object.entries(error)) {
-          console.log('VALUE', value)
-          if(key === 'code'){
-            errorCode = value
-          }
+          if(key === 'code') errorCode = value
         }
 
-        console.log('ERROR CODE', errorCode)
-      
         switch(errorCode) {
           case 'auth/email-already-in-use':
             try {
-              await signInUser(
-                email, 
-                password
-              )
+              await signInUser(email, password)
               setError(null)
               navigate('/dashboard')
             } catch (error) {
@@ -114,10 +96,7 @@ export default function Splash({
                 let errorCode:string = ''
                 
                 for (const [key, value] of Object.entries(error)) {
-                  console.log(`${key}: ${value}`);
-                  if(key === 'code'){
-                    errorCode = value
-                  }
+                  if(key === 'code') errorCode = value
                 }
                 /* Handle additional errors */
               }
@@ -136,11 +115,8 @@ export default function Splash({
   }
 
   const logOff = async() => {
-    console.log('removing the local storage')
-    localStorage.removeItem('userId');
     try {
       await signOutUser()
-
     } catch (error) {}
   }
 
@@ -168,10 +144,10 @@ export default function Splash({
                 {user && <Typography>You are logged in</Typography>}
                   <Grid container spacing={3}>
                     <Grid item xs={6}>
-                     <Button sx={{width:'100%'}} onClick={handleLogin} variant="contained">Login</Button>
+                     <Button sx={styles.Button} onClick={handleLogin} variant="contained">Login</Button>
                     </Grid>
                     <Grid item xs={6}>
-                      <Button sx={{width:'100%'}} onClick={logOff} variant="contained">Log Off</Button>
+                      <Button sx={styles.Button} onClick={logOff} variant="contained">Log Off</Button>
                     </Grid> 
                   </Grid>
                 </Grid>

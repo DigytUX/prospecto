@@ -26,6 +26,7 @@ export const AuthContextProvider: React.FC<Props> = ({children}) => {
   }
 
   const signOutUser = () => {
+    localStorage.removeItem('userId'); 
     return signOut(auth)
   }
 
