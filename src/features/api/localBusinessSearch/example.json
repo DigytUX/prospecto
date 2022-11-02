@@ -1,0 +1,689 @@
+{
+  "status": "OK",
+  "request_id": "4292736f-9fdc-49b5-a7a8-003b9f5167ee",
+  "data": [
+    {
+      "business_id": "0x864c2f576c47e55d:0x3cfc19e0d7e85b94",
+      "google_id": "0x864c2f576c47e55d:0x3cfc19e0d7e85b94",
+      "place_id": "ChIJXeVHbFcvTIYRlFvo1-AZ_Dw",
+      "phone_number": "+19724462500",
+      "name": "Cathedral Plumbing of Texas, LLC",
+      "latitude": 32.987145999999996,
+      "longitude": -96.92448,
+      "full_address": "Cathedral Plumbing of Texas, LLC, 1451 Halsey Way, Carrollton, TX 75007",
+      "review_count": 323,
+      "rating": 4.6,
+      "timezone": "America/Chicago",
+      "working_hours": {
+        "Saturday": [
+          "Closed"
+        ],
+        "Sunday": [
+          "Closed"
+        ],
+        "Monday": [
+          "7:30AM–5:30PM"
+        ],
+        "Tuesday": [
+          "7:30AM–5:30PM"
+        ],
+        "Wednesday": [
+          "7:30AM–5:30PM"
+        ],
+        "Thursday": [
+          "7:30AM–5:30PM"
+        ],
+        "Friday": [
+          "7:30AM–5:30PM"
+        ]
+      },
+      "website": "https://www.cathedralplumbingtx.com",
+      "verified": true,
+      "place_link": "https://www.google.com/maps/preview/place/Cathedral+Plumbing+of+Texas%2C+LLC/@32.987145999999996,-96.92448/data=!4m2!3m1!1s0x864c2f576c47e55d:0x3cfc19e0d7e85b94",
+      "cid": "4394415789892459412",
+      "reviews_link": "https://search.google.com/local/reviews?placeid=ChIJXeVHbFcvTIYRlFvo1-AZ_Dw&q=plumbers+in+texas&authuser=0&hl=en&gl=US",
+      "owner_id": "110147018562285922777",
+      "owner_link": "https://maps.google.com/maps/contrib/110147018562285922777",
+      "owner_name": "Cathedral Plumbing of Texas, LLC",
+      "booking_link": "https://www.cathedralplumbingtx.com/contact-us",
+      "reservations_link": null,
+      "business_status": "OPEN",
+      "type": "Plumber",
+      "subtypes": [
+        "Plumber",
+        "Drainage service"
+      ],
+      "photos_sample": [
+        {
+          "photo_id": "AF1QipOEaf8i3PzhIbETevE4-Ry8TdbpV71I7fz4Ap0M",
+          "photo_url": "https://lh5.googleusercontent.com/p/AF1QipOEaf8i3PzhIbETevE4-Ry8TdbpV71I7fz4Ap0M",
+          "photo_url_large": "https://lh5.googleusercontent.com/p/AF1QipOEaf8i3PzhIbETevE4-Ry8TdbpV71I7fz4Ap0M=w1650-h1100-k-no",
+          "video_thumbnail_url": null,
+          "latitude": 32.9877776,
+          "longitude": -96.92442229999999,
+          "type": "photo"
+        }
+      ],
+      "reviews_per_rating": {
+        "1": 27,
+        "2": 4,
+        "3": 0,
+        "4": 9,
+        "5": 283
+      },
+      "photo_count": 18,
+      "about": {
+        "summary": null,
+        "details": {
+          "Service options": {
+            "Onsite services": true,
+            "Online estimates": false
+          },
+          "Accessibility": {
+            "Wheelchair accessible entrance": true
+          },
+          "Planning": {
+            "Appointment required": true
+          }
+        }
+      },
+      "address": "1451 Halsey Way, Carrollton, TX 75007",
+      "order_link": null,
+      "price_level": null,
+      "district": "Central Carrollton",
+      "street_address": "1451 Halsey Way",
+      "city": "Carrollton",
+      "zipcode": "75007",
+      "state": "Texas",
+      "country": "US"
+    },
+    {
+      "business_id": "0x864c1ee39503b8c1:0xccbe5d6f5e45fa82",
+      "google_id": "0x864c1ee39503b8c1:0xccbe5d6f5e45fa82",
+      "place_id": "ChIJwbgDleMeTIYRgvpFXm9dvsw",
+      "phone_number": "+19724981047",
+      "name": "Texas Green Plumbing",
+      "latitude": 32.960231,
+      "longitude": -96.7028236,
+      "full_address": "Texas Green Plumbing, 1300 E Arapaho Rd #101, Richardson, TX 75081",
+      "review_count": 116,
+      "rating": 4.7,
+      "timezone": "America/Chicago",
+      "working_hours": {
+        "Saturday": [
+          "8AM–3PM"
+        ],
+        "Sunday": [
+          "Closed"
+        ],
+        "Monday": [
+          "7AM–6PM"
+        ],
+        "Tuesday": [
+          "7AM–6PM"
+        ],
+        "Wednesday": [
+          "7AM–6PM"
+        ],
+        "Thursday": [
+          "7AM–6PM"
+        ],
+        "Friday": [
+          "7AM–6PM"
+        ]
+      },
+      "website": "https://texasgreenplumbing.com",
+      "verified": true,
+      "place_link": "https://www.google.com/maps/preview/place/Texas+Green+Plumbing/@32.960231,-96.7028236/data=!4m2!3m1!1s0x864c1ee39503b8c1:0xccbe5d6f5e45fa82",
+      "cid": "14753332162216721026",
+      "reviews_link": "https://search.google.com/local/reviews?placeid=ChIJwbgDleMeTIYRgvpFXm9dvsw&q=plumbers+in+texas&authuser=0&hl=en&gl=US",
+      "owner_id": "104674204179041481631",
+      "owner_link": "https://maps.google.com/maps/contrib/104674204179041481631",
+      "owner_name": "Texas Green Plumbing",
+      "booking_link": null,
+      "reservations_link": null,
+      "business_status": "OPEN",
+      "type": "Plumber",
+      "subtypes": [
+        "Plumber",
+        "Drainage service",
+        "Furnace repair service",
+        "Heating contractor",
+        "Septic system service"
+      ],
+      "photos_sample": [
+        {
+          "photo_id": "AF1QipPuIwoIAQtYTavO9PZbLj3dO_xncUQUXOl_bvrS",
+          "photo_url": "https://lh5.googleusercontent.com/p/AF1QipPuIwoIAQtYTavO9PZbLj3dO_xncUQUXOl_bvrS",
+          "photo_url_large": "https://lh5.googleusercontent.com/p/AF1QipPuIwoIAQtYTavO9PZbLj3dO_xncUQUXOl_bvrS=w2119-h1192-k-no",
+          "video_thumbnail_url": null,
+          "latitude": 32.960429,
+          "longitude": -96.70291429999999,
+          "type": "photo"
+        }
+      ],
+      "reviews_per_rating": {
+        "1": 6,
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "5": 101
+      },
+      "photo_count": 127,
+      "about": {
+        "summary": null,
+        "details": {
+          "Service options": {
+            "Online estimates": true
+          }
+        }
+      },
+      "address": "1300 E Arapaho Rd #101, Richardson, TX 75081",
+      "order_link": null,
+      "price_level": null,
+      "district": null,
+      "street_address": "1300 E Arapaho Rd #101",
+      "city": "Richardson",
+      "zipcode": "75081",
+      "state": "Texas",
+      "country": "US"
+    },
+    {
+      "business_id": "0x880e2cac1153c397:0x601ff25021fe71c1",
+      "google_id": "0x880e2cac1153c397:0x601ff25021fe71c1",
+      "place_id": "ChIJl8NTEawsDogRwXH-IVDyH2A",
+      "phone_number": "+13124641744",
+      "name": "The Purple Pig Restaurant",
+      "latitude": 41.890738999999996,
+      "longitude": -87.6245691,
+      "full_address": "The Purple Pig Restaurant, 444 Michigan Ave, Chicago, IL 60611",
+      "review_count": 5106,
+      "rating": 4.6,
+      "timezone": "America/Chicago",
+      "working_hours": {
+        "Saturday": [
+          "11AM–10PM"
+        ],
+        "Sunday": [
+          "11AM–9PM"
+        ],
+        "Monday": [
+          "11AM–9PM"
+        ],
+        "Tuesday": [
+          "11AM–9PM"
+        ],
+        "Wednesday": [
+          "11AM–9PM"
+        ],
+        "Thursday": [
+          "11AM–10PM"
+        ],
+        "Friday": [
+          "11AM–10PM"
+        ]
+      },
+      "website": "https://thepurplepigchicago.com",
+      "verified": true,
+      "place_link": "https://www.google.com/maps/preview/place/The+Purple+Pig+Restaurant/@41.890738999999996,-87.6245691/data=!4m2!3m1!1s0x880e2cac1153c397:0x601ff25021fe71c1",
+      "cid": "6926521177900741057",
+      "reviews_link": "https://search.google.com/local/reviews?placeid=ChIJl8NTEawsDogRwXH-IVDyH2A&q=restaurants+in+chicago&authuser=0&hl=en&gl=US",
+      "owner_id": "117843084873956424149",
+      "owner_link": "https://maps.google.com/maps/contrib/117843084873956424149",
+      "owner_name": "The Purple Pig Restaurant",
+      "booking_link": null,
+      "reservations_link": "https://www.exploretock.com/thepurplepig",
+      "business_status": "OPEN",
+      "type": "Mediterranean restaurant",
+      "subtypes": [
+        "Mediterranean restaurant",
+        "Greek restaurant",
+        "Italian restaurant"
+      ],
+      "photos_sample": [
+        {
+          "photo_id": "AF1QipPd6CxvD6s8iGFtRu8usE0YRjvraCaDa-YtITbe",
+          "photo_url": "https://lh5.googleusercontent.com/p/AF1QipPd6CxvD6s8iGFtRu8usE0YRjvraCaDa-YtITbe",
+          "photo_url_large": "https://lh5.googleusercontent.com/p/AF1QipPd6CxvD6s8iGFtRu8usE0YRjvraCaDa-YtITbe=w4032-h3024-k-no",
+          "video_thumbnail_url": null,
+          "latitude": 41.89069383270451,
+          "longitude": -87.62478167708878,
+          "type": "photo"
+        }
+      ],
+      "reviews_per_rating": {
+        "1": 114,
+        "2": 101,
+        "3": 261,
+        "4": 905,
+        "5": 3725
+      },
+      "photo_count": 9922,
+      "about": {
+        "summary": "Expanded outpost of a famed pork & wine specialist with an open kitchen & a chic, airy setting.",
+        "details": {
+          "Service options": {
+            "Curbside pickup": true,
+            "No-contact delivery": true,
+            "Delivery": true,
+            "Takeout": true,
+            "Dine-in": true
+          },
+          "Highlights": {
+            "Great dessert": true
+          },
+          "Popular for": {
+            "Lunch": true,
+            "Dinner": true,
+            "Solo dining": true
+          },
+          "Accessibility": {
+            "Wheelchair accessible entrance": true,
+            "Wheelchair accessible restroom": true,
+            "Wheelchair accessible seating": true,
+            "Wheelchair accessible parking lot": false
+          },
+          "Offerings": {
+            "Alcohol": true,
+            "Beer": true,
+            "Cocktails": true,
+            "Coffee": true,
+            "Comfort food": true,
+            "Hard liquor": true,
+            "Late-night food": true,
+            "Small plates": true,
+            "Wine": true
+          },
+          "Dining options": {
+            "Brunch": true,
+            "Lunch": true,
+            "Dinner": true,
+            "Catering": true,
+            "Dessert": true,
+            "Seating": true
+          },
+          "Amenities": {
+            "Bar onsite": true,
+            "High chairs": true,
+            "Restroom": true
+          },
+          "Atmosphere": {
+            "Casual": true,
+            "Cozy": true,
+            "Upscale": true
+          },
+          "Crowd": {
+            "Family-friendly": true,
+            "Groups": true,
+            "LGBTQ+ friendly": true,
+            "Tourists": true
+          },
+          "Planning": {
+            "Lunch reservations recommended": true,
+            "Dinner reservations recommended": true,
+            "Accepts reservations": true,
+            "Usually a wait": true
+          },
+          "Payments": {
+            "Debit cards": true
+          }
+        }
+      },
+      "address": "444 Michigan Ave, Chicago, IL 60611",
+      "order_link": "https://food.google.com/chooseprovider?restaurantId=%2Fm%2F0_yvzfl&g2lbs=AL1YbfXYGmtCrYmm1kDUtHhpVqPBnjEtpg89oXgFQuLpRngzNndbjJZ79dKJmH82M8YUFQZCGWiDf7LtpoDmcVQDqrVl9WW73C68vAkDSN2zPdVm8jqgaDqMG533yll3THNO8tQOPPMA&hl=en-US&gl=us&fo_m=MfohQo559jFvMWvkddHzV46uMT_RFPQ05bfKMQVr5-7IofUJMU_hT8vrWuwRMUv3d8yCO4PgMUOzJVpjPL1YMfZ3bInYwBDuMfaXTPp5KXh-&gei=9y44Y-zcINis5NoP_cS2mAc&ei=9y44Y-zcINis5NoP_cS2mAc&fo_s=OA%2CAH%2CSOE",
+      "price_level": "$$",
+      "district": "Streeterville",
+      "street_address": "444 Michigan Ave",
+      "city": "Chicago",
+      "zipcode": "60611",
+      "state": "Illinois",
+      "country": "US"
+    },
+    {
+      "business_id": "0x880e2cc5369bc9b3:0x912bc8bff9607a52",
+      "google_id": "0x880e2cc5369bc9b3:0x912bc8bff9607a52",
+      "place_id": "ChIJs8mbNsUsDogRUnpg-b_IK5E",
+      "phone_number": "+13124926262",
+      "name": "Girl & The Goat",
+      "latitude": 41.884127899999996,
+      "longitude": -87.6479354,
+      "full_address": "Girl & The Goat, 809 W Randolph St, Chicago, IL 60607",
+      "review_count": 4598,
+      "rating": 4.7,
+      "timezone": "America/Chicago",
+      "working_hours": {
+        "Saturday": [
+          "4:30–11PM"
+        ],
+        "Sunday": [
+          "4:30–10PM"
+        ],
+        "Monday": [
+          "4:30–10PM"
+        ],
+        "Tuesday": [
+          "4:30–10PM"
+        ],
+        "Wednesday": [
+          "4:30–10PM"
+        ],
+        "Thursday": [
+          "4:30–10PM"
+        ],
+        "Friday": [
+          "4:30–11PM"
+        ]
+      },
+      "website": "http://www.girlandthegoat.com",
+      "verified": true,
+      "place_link": "https://www.google.com/maps/preview/place/Girl+%26+The+Goat/@41.884127899999996,-87.6479354/data=!4m2!3m1!1s0x880e2cc5369bc9b3:0x912bc8bff9607a52",
+      "cid": "10460675286346267218",
+      "reviews_link": "https://search.google.com/local/reviews?placeid=ChIJs8mbNsUsDogRUnpg-b_IK5E&q=restaurants+in+chicago&authuser=0&hl=en&gl=US",
+      "owner_id": "104932176220793052639",
+      "owner_link": "https://maps.google.com/maps/contrib/104932176220793052639",
+      "owner_name": "Girl & The Goat",
+      "booking_link": "https://www.opentable.com/restaurant/profile/44629?ref=1068",
+      "reservations_link": "https://www.opentable.com/restaurant/profile/44629?ref=1068",
+      "business_status": "OPEN",
+      "type": "New American restaurant",
+      "subtypes": [
+        "New American restaurant",
+        "Brunch restaurant",
+        "Seafood restaurant"
+      ],
+      "photos_sample": [
+        {
+          "photo_id": "AF1QipMNqbHXNFKaN9-dO8RgB_oXc7TTUmZTgANfUarH",
+          "photo_url": "https://lh5.googleusercontent.com/p/AF1QipMNqbHXNFKaN9-dO8RgB_oXc7TTUmZTgANfUarH",
+          "photo_url_large": "https://lh5.googleusercontent.com/p/AF1QipMNqbHXNFKaN9-dO8RgB_oXc7TTUmZTgANfUarH=w1055-h719-k-no",
+          "video_thumbnail_url": null,
+          "latitude": 41.8843014,
+          "longitude": -87.6479586,
+          "type": "photo"
+        }
+      ],
+      "reviews_per_rating": {
+        "1": 71,
+        "2": 58,
+        "3": 200,
+        "4": 664,
+        "5": 3605
+      },
+      "photo_count": 7913,
+      "about": {
+        "summary": "Hot spot where Stephanie Izard serves up innovative small plates from a dramatic open kitchen.",
+        "details": {
+          "From the business": {
+            "Identifies as women-owned": true
+          },
+          "Service options": {
+            "Takeout": true,
+            "Dine-in": true,
+            "Delivery": false
+          },
+          "Highlights": {
+            "Great cocktails": true,
+            "Great coffee": true,
+            "Great dessert": true
+          },
+          "Popular for": {
+            "Lunch": true,
+            "Dinner": true,
+            "Solo dining": true
+          },
+          "Accessibility": {
+            "Wheelchair accessible elevator": true,
+            "Wheelchair accessible entrance": true,
+            "Wheelchair accessible restroom": true,
+            "Wheelchair accessible seating": true,
+            "Wheelchair accessible parking lot": false
+          },
+          "Offerings": {
+            "Alcohol": true,
+            "Beer": true,
+            "Cocktails": true,
+            "Coffee": true,
+            "Comfort food": true,
+            "Hard liquor": true,
+            "Healthy options": true,
+            "Late-night food": true,
+            "Organic dishes": true,
+            "Small plates": true,
+            "Vegetarian options": true,
+            "Wine": true
+          },
+          "Dining options": {
+            "Lunch": true,
+            "Dinner": true,
+            "Counter service": true,
+            "Dessert": true,
+            "Seating": true
+          },
+          "Amenities": {
+            "Bar onsite": true,
+            "Gender-neutral restroom": true,
+            "Restroom": true
+          },
+          "Atmosphere": {
+            "Casual": true,
+            "Cozy": true,
+            "Romantic": true,
+            "Upscale": true
+          },
+          "Crowd": {
+            "Groups": true,
+            "LGBTQ+ friendly": true,
+            "Tourists": true
+          },
+          "Planning": {
+            "Lunch reservations recommended": true,
+            "Dinner reservations recommended": true,
+            "Accepts reservations": true,
+            "Usually a wait": true
+          },
+          "Payments": {
+            "Debit cards": true,
+            "Credit cards": true
+          }
+        }
+      },
+      "address": "809 W Randolph St, Chicago, IL 60607",
+      "order_link": "https://www.google.com/maps/reserve/v/dine/c/0GVtsKTXnSQ?source=pa&hl=en-US&gei=9y44Y-zcINis5NoP_cS2mAc&sourceurl=https://www.google.com/search?tbm%3Dmap%26authuser%3D0%26hl%3Den%26gl%3Dus%26pb%3D!4m12!1m3!1d99999!2d-101.547385!3d38.447030!2m3!1f0!2f0!3f0!3m2!1i1792!2i513!4f13.1!7i2!10b1!12m8!1m1!18b1!2m3!5m1!6e2!20e3!10b1!16b1!19m4!2m3!1i360!2i120!4i8!20m57!2m2!1i203!2i100!3m2!2i4!5b1!6m6!1m2!1i86!2i86!1m2!1i408!2i240!7m42!1m3!1e1!2b0!3e3!1m3!1e2!2b1!3e2!1m3!1e2!2b0!3e3!1m3!1e8!2b0!3e3!1m3!1e10!2b0!3e3!1m3!1e10!2b1!3e2!1m3!1e9!2b1!3e2!1m3!1e10!2b0!3e3!1m3!1e10!2b1!3e2!1m3!1e10!2b0!3e4!2b1!4b1!9b0!22m6!1sU_y0YerfEKeJ9u8P99OVoAs:2950!2s1i:0,t:11886,p:U_y0YerfEKeJ9u8P99OVoAs:2950!7e81!12e5!17sU_y0YerfEKeJ9u8P99OVoAs:3354!18e15!24m59!1m21!13m8!2b1!3b1!4b1!6i1!8b1!9b1!14b1!20b1!18m11!3b1!4b1!5b1!6b1!9b1!12b0!13b1!14b1!15b0!17b0!20b1!2b1!5m5!2b1!3b1!5b1!6b1!7b1!10m1!8e3!14m1!3b1!17b1!20m2!1e3!1e6!24b1!25b1!26b1!29b1!30m1!2b1!36b1!43b1!52b1!54m1!1b1!55b1!56m2!1b1!3b1!65m5!3m4!1m3!1m2!1i224!2i298!89b1!26m4!2m3!1i80!2i92!4i8!30m28!1m6!1m2!1i0!2i0!2m2!1i458!2i513!1m6!1m2!1i1742!2i0!2m2!1i1792!2i513!1m6!1m2!1i0!2i0!2m2!1i1792!2i20!1m6!1m2!1i0!2i493!2m2!1i1792!2i513!34m17!2b1!3b1!4b1!6b1!8m5!1b1!3b1!4b1!5b1!6b1!9b1!12b1!14b1!20b1!23b1!25b1!26b1!37m1!1e81!42b1!47m0!49m5!3b1!6m1!1b1!7m1!1e3!50m4!2e2!3m2!1b1!3b1!67m2!7b1!10b1!69i585%26q%3Drestaurants%2Bin%2Bchicago%26oq%3Drestaurants%2Bin%2Bchicago",
+      "price_level": "$$$",
+      "district": "West Loop",
+      "street_address": "809 W Randolph St",
+      "city": "Chicago",
+      "zipcode": "60607",
+      "state": "Illinois",
+      "country": "US"
+    },
+    {
+      "business_id": "0x8085808b287f3b3b:0xa49802f84f7ddb35",
+      "google_id": "0x8085808b287f3b3b:0xa49802f84f7ddb35",
+      "place_id": "ChIJOzt_KIuAhYARNdt9T_gCmKQ",
+      "phone_number": "+14154336600",
+      "name": "Hilton San Francisco Financial District",
+      "latitude": 37.7952284,
+      "longitude": -122.40407289999999,
+      "full_address": "Hilton San Francisco Financial District, 750 Kearny St, San Francisco, CA 94108",
+      "review_count": 4473,
+      "rating": 3.9,
+      "timezone": "America/Los_Angeles",
+      "working_hours": null,
+      "website": "https://www.hilton.com/en/hotels/sfofdhf-hilton-san-francisco-financial-district/?SEO_id=GMB-AMER-HH-SFOFDHF&y_source=1_MTIyMDk1Ni03MTUtbG9jYXRpb24ud2Vic2l0ZQ%3D%3D",
+      "verified": true,
+      "place_link": "https://www.google.com/maps/preview/place/Hilton+San+Francisco+Financial+District/@37.7952284,-122.40407289999999/data=!4m2!3m1!1s0x8085808b287f3b3b:0xa49802f84f7ddb35",
+      "cid": "11860232884188994357",
+      "reviews_link": "https://search.google.com/local/reviews?placeid=ChIJOzt_KIuAhYARNdt9T_gCmKQ&q=hotels+near+san+francisco&authuser=0&hl=en&gl=US",
+      "owner_id": "112262189677275123944",
+      "owner_link": "https://maps.google.com/maps/contrib/112262189677275123944",
+      "owner_name": "Hilton San Francisco Financial District",
+      "booking_link": null,
+      "reservations_link": null,
+      "business_status": "OPEN",
+      "type": "Hotel",
+      "subtypes": [
+        "Hotel"
+      ],
+      "photos_sample": [
+        {
+          "photo_id": "AF1QipPb-WBlq47zGFMjalAgym-w9SvyZY14qbtBA0GJ",
+          "photo_url": "https://lh5.googleusercontent.com/p/AF1QipPb-WBlq47zGFMjalAgym-w9SvyZY14qbtBA0GJ",
+          "photo_url_large": "https://lh5.googleusercontent.com/p/AF1QipPb-WBlq47zGFMjalAgym-w9SvyZY14qbtBA0GJ=w4500-h3000-k-no",
+          "video_thumbnail_url": null,
+          "latitude": 37.7951066,
+          "longitude": -122.4047513,
+          "type": "photo"
+        }
+      ],
+      "reviews_per_rating": {
+        "1": 354,
+        "2": 288,
+        "3": 653,
+        "4": 1349,
+        "5": 1829
+      },
+      "photo_count": 6995,
+      "about": {
+        "summary": "Located in San Francisco's financial district, this upscale 27-story hotel is a 1-mile drive from conventions at the Moscone Center and 5 miles' drive from the Golden Gate Bridge. Offering city or bay views, the chic rooms have custom-designed beds, flat-screen TVs and Wi-Fi (fee). Upgraded rooms provide access to a club lounge with free breakfast and evening appetizers. Suites add living areas and minifridges. Room service is available. Amenities include a restaurant, a stylish bar, and a wine bar with access to iPads. A breakfast buffet is offered for a fee. There's also a 24/7 gym, a business center and 20,000 sq ft of meeting space.",
+        "details": null
+      },
+      "address": "750 Kearny St, San Francisco, CA 94108",
+      "order_link": null,
+      "price_level": null,
+      "district": "Chinatown",
+      "street_address": "750 Kearny St",
+      "city": "San Francisco",
+      "zipcode": "94108",
+      "state": "California",
+      "country": "US",
+      "hotel_location_rating": {
+        "Overall": 4.8,
+        "Things to do": 4.8,
+        "Transit": 4.6,
+        "Airports": 4.2
+      },
+      "hotel_amenities": null,
+      "hotel_stars": 4,
+      "hotel_review_summary": {
+        "Rooms": {
+          "score": 2.8,
+          "summary": [
+            "Rooms had views & TVs",
+            "Some guests said the rooms were small & dated, and that cleanliness & maintenance could be improved",
+            "Some guests said the bathrooms were small & cleanliness could be improved"
+          ]
+        },
+        "Location": {
+          "score": 4.05,
+          "summary": [
+            "Near the city center & beach; shopping, sightseeing, restaurants & bars nearby",
+            "Near public transit"
+          ]
+        },
+        "Service & facilities": {
+          "score": 2.7,
+          "summary": [
+            "Some guests said management & housekeeping could be improved",
+            "Guests enjoyed the fitness center"
+          ]
+        }
+      }
+    },
+    {
+      "business_id": "0x808f7fd7b11f85eb:0xe038cf2fa5dfaed0",
+      "google_id": "0x808f7fd7b11f85eb:0xe038cf2fa5dfaed0",
+      "place_id": "ChIJ64Ufsdd_j4AR0K7fpS_POOA",
+      "phone_number": "+14157672000",
+      "name": "Hyatt Place San Francisco / Downtown",
+      "latitude": 37.7787156,
+      "longitude": -122.3923413,
+      "full_address": "Hyatt Place San Francisco / Downtown, 701 3rd St, San Francisco, CA 94107",
+      "review_count": 446,
+      "rating": 4.2,
+      "timezone": "America/Los_Angeles",
+      "working_hours": null,
+      "website": "https://www.hyatt.com/en-US/hotel/california/hyatt-place-san-francisco-downtown/sfozs?src=corp_lclb_gmb_seo_sfozs",
+      "verified": true,
+      "place_link": "https://www.google.com/maps/preview/place/Hyatt+Place+San+Francisco+%2F+Downtown/@37.7787156,-122.3923413/data=!4m2!3m1!1s0x808f7fd7b11f85eb:0xe038cf2fa5dfaed0",
+      "cid": "16156891466744966864",
+      "reviews_link": "https://search.google.com/local/reviews?placeid=ChIJ64Ufsdd_j4AR0K7fpS_POOA&q=hotels+near+san+francisco&authuser=0&hl=en&gl=US",
+      "owner_id": "110353988623264733423",
+      "owner_link": "https://maps.google.com/maps/contrib/110353988623264733423",
+      "owner_name": "Hyatt Place San Francisco / Downtown",
+      "booking_link": null,
+      "reservations_link": null,
+      "business_status": "OPEN",
+      "type": "Hotel",
+      "subtypes": [
+        "Hotel"
+      ],
+      "photos_sample": [
+        {
+          "photo_id": "https://cdn.worldota.net/t/1024x768/content/ed/91/ed918d9a61cf4fd0fa54723e91ab897974f383c9.jpeg",
+          "photo_url": "https://lh3.googleusercontent.com/gps-proxy/AGL7lfCQPJN4b9Eebi7SoFqL4P_ffYwaQS1IMJ8sEmC9SOxa53X4XG2iTVurF-Cu7wBM3UzD8s7c-ZCo0v6H5hedLAHL_B5nImLbu83VogW18-O7Js6f66ybtsQhcAAUMmhLFLm7IeuBuCv_8w1Of-bZnOjYBaqAaOCkBI6ttvBYgWpcs6Q1",
+          "photo_url_large": "https://lh3.googleusercontent.com/gps-proxy/AGL7lfCQPJN4b9Eebi7SoFqL4P_ffYwaQS1IMJ8sEmC9SOxa53X4XG2iTVurF-Cu7wBM3UzD8s7c-ZCo0v6H5hedLAHL_B5nImLbu83VogW18-O7Js6f66ybtsQhcAAUMmhLFLm7IeuBuCv_8w1Of-bZnOjYBaqAaOCkBI6ttvBYgWpcs6Q1=w1024-h768-k-no",
+          "video_thumbnail_url": null,
+          "latitude": 37.7787301,
+          "longitude": -122.39261130000001,
+          "type": "photo"
+        }
+      ],
+      "reviews_per_rating": {
+        "1": 25,
+        "2": 29,
+        "3": 29,
+        "4": 116,
+        "5": 247
+      },
+      "photo_count": 538,
+      "about": {
+        "summary": "A 2-minute walk from a tram stop, this relaxed hotel is 5 minutes on foot from baseball games at Oracle Park and a 14-minute stroll from the San Francisco Museum of Modern Art. Bright, informal rooms come with complimentary Wi-Fi and flat-screen TVs, plus minifridges, coffeemakers and safes. Suites add sitting areas with sofabeds. Breakfast and valet parking are available for a fee. There's a cafe/bar and a 24-hour snack shop, as well as a business center and a gym.",
+        "details": null
+      },
+      "address": "701 3rd St, San Francisco, CA 94107",
+      "order_link": null,
+      "price_level": null,
+      "district": "China Basin",
+      "street_address": "701 3rd St",
+      "city": "San Francisco",
+      "zipcode": "94107",
+      "state": "California",
+      "country": "US",
+      "hotel_location_rating": {
+        "Overall": 3.5,
+        "Things to do": 3.8,
+        "Transit": 4.3,
+        "Airports": 4.5
+      },
+      "hotel_amenities": {
+        "Free Wi-Fi": true,
+        "Free breakfast": true
+      },
+      "hotel_stars": 3,
+      "hotel_review_summary": {
+        "Rooms": {
+          "score": 3.2,
+          "summary": [
+            "Guests liked the updated rooms, though some said they were small & maintenance could be improved",
+            "Rooms had views",
+            "Some guests mentioned bathroom cleanliness could be improved"
+          ]
+        },
+        "Location": {
+          "score": 3.55,
+          "summary": [
+            "Near the city center; shopping, restaurants & bars nearby"
+          ]
+        },
+        "Service & facilities": {
+          "score": 3.65,
+          "summary": [
+            "Guests appreciated the friendly, professional staff",
+            "Guests spoke highly of the reception staff, though some said housekeeping could be improved"
+          ]
+        }
+      }
+    }
+  ]
+}
