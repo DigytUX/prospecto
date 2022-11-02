@@ -2,7 +2,6 @@ import React, {useEffect, useState, useContext} from 'react'
 import {auth} from '../../config/firebase/firebase.config'
 import {AuthContext} from "../../context/AuthContext";
 import {createUserWithEmailAndPassword, signOut, signInWithEmailAndPassword} from 'firebase/auth'
-
 import {
   Container,
   Grid,
@@ -12,6 +11,7 @@ import {
   Button
 } from '@mui/material'
 import { errorPrefix } from '@firebase/util';
+import {createUser, signInUser, signOutUser} from '../../provider/AuthProvider'
 
 interface AppProps {
   title:string,
@@ -31,7 +31,9 @@ export default function Splash({
   text, 
   image
 }: AppProps){
+  
   const user = useContext(AuthContext);
+  
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [error, setError] = useState<null | string>(null)
@@ -69,14 +71,12 @@ export default function Splash({
 
   const createAccount = async () => {
     try {
-      await createUserWithEmailAndPassword(
-        auth,
+      await createUser(
         email,
         password
       );
     } catch (error) {
       if (error instanceof Error) {
-
         let errorCode:string = ''
 
         for (const [key, value] of Object.entries(error)) {
@@ -88,10 +88,8 @@ export default function Splash({
       
         switch(errorCode) {
           case 'auth/email-already-in-use':
-            setError('Username already in use')
-
             try {
-              await signInWithEmailAndPassword(auth, email, password)
+              await signInUser(email, password)
               setError(null)
             } catch (error) {
               if (error instanceof Error) {
@@ -106,7 +104,6 @@ export default function Splash({
                 /* Handle additional errors */
               }
             }
-
             break;
           case 'auth/insufficient-permission':
             break;
@@ -122,7 +119,7 @@ export default function Splash({
 
   const logOff = async() => {
     try {
-      signOut(auth)
+      signOutUser()
     } catch (error) {}
   }
 
@@ -146,6 +143,7 @@ export default function Splash({
                   <TextField onChange={e => setPassword(e.target.value)} value={password} sx={styles.TextField} placeholder="password" type="password" />
                 </Grid>
                 <Grid item xs={6}>
+                {user && <Typography>You are logged in</Typography>}
                   <Typography>{error}</Typography>
                   <Grid container spacing={3}>
                     <Grid item xs={6}>

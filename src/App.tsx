@@ -5,14 +5,11 @@ import { BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import Welcome from '../src/pages/index'
 import Home from '../src/pages/Home'
 import { AuthContext } from './context/AuthContext'
-
-
+import {AuthProvider} from '../src/provider/AuthProvider'
+import {RouterGuard} from './components/RouterGuard'
+import {Dashboard} from './components/Dashboard/Dashboard'
 
 function App() {
-  const user = useContext(AuthContext);
-
-  console.log('Here is the user from user context', user)
-  
   const styles = {
     Container: {
       height:'100vh',
@@ -32,12 +29,19 @@ function App() {
     }
   }
   return (
-  <Router>
-    <Routes>
-      <Route path='/dashboard' element={<Home />} />
-      <Route path='/' element={<Welcome />} />
-    </Routes> 
-  </Router>
+    <AuthProvider>
+      <Routes>
+        <Route path='/' element={<Welcome />} />
+        <Route 
+          path='/dashboard' 
+          element={
+          <RouterGuard>
+            <Dashboard />
+          </RouterGuard>
+          }
+        />
+      </Routes>
+    </AuthProvider>
   )
 }
 
