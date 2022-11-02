@@ -8,9 +8,7 @@ interface Props {
 }
 
 export const ProtectedRoute:any = (props:Props) => {
-  const user = UserAuth()
-  
-  if(!user.user) {
+  if(!localStorage.getItem('userId')) {
     return (
       <Navigate to='/' />
     )
